@@ -1,7 +1,7 @@
 pipeline {
       agent none
       stages {
-		    stage('AnsibleServer'){
+	   stage('AnsibleServer-Sequential-Stages'){
             agent {
                 label "ansiblejob"
             } 
@@ -27,7 +27,7 @@ pipeline {
                }    
 	         }       
       }
- 		 stage('DockerServer') {
+           stage('DockerServer-Sequential-Stages') {
             agent {
                 label 'dockerjob'
             }
